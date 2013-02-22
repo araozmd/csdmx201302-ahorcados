@@ -1,4 +1,4 @@
-require 'modelo/diccionario'
+require 'lib/diccionario'
 
 describe Diccionario do
   context "Especs de diccionario" do

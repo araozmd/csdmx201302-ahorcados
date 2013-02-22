@@ -6,6 +6,7 @@ class EstatusJuego
   def initialize (pal)
     @palabra=pal
     @intentos=7
+    @letras_capturadas = "_"*pal.size
   end  
   
 
