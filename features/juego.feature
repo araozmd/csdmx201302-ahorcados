@@ -89,15 +89,3 @@ Feature: Valida pagina inicial
 		And Debo observar la leyenda "Te faltaron:"
 		And Debo observar la leyenda "La palabra era:"
 
-	Scenario: "Ganaste"
-		Given Entro al juego
-		And Capturo una letra "C" en el campo de captura
-		When Presiono el boton enviar
-		And Capturo una letra "A" en el campo de captura
-		When Presiono el boton enviar
-		And Capturo una letra "S" en el campo de captura
-		When Presiono el boton enviar
-		And Capturo una letra "A" en el campo de captura
-		When Presiono el boton enviar
-		Then Debo observar la leyenda "Has acertado"
-		And Debo observar la leyenda "La palabra era"

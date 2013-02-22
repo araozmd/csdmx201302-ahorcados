@@ -24,7 +24,7 @@ get '/' do
 		@letrasFaltantes = @@validador.getLetrasFaltantes()
 		@palabra = @@validador.getPalabra()
 		erb :finDelJuego
-	elsif(@@validador.status() == "EXITO")
+	elsif(@@validador.estatus() == "EXITO")
 		@palabra=@@validador.getPalabra()
 		erb :exito
 	else
