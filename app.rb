@@ -7,5 +7,7 @@ end
 
 
 get '/' do
-  erb :ahorcado
+	palabra = ["","","",""]
+	
+	erb :ahorcado
 end
