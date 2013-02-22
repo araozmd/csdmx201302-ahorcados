@@ -4,9 +4,8 @@ class EstatusJuego
   attr_accessor :letras_capturadas
   
   def initialize (pal)
-    palabra=pal
-    intentos=7
-    letras_capturadas=[]
+    @palabra=pal
+    @intentos=7
   end  
   
 
