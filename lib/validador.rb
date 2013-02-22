@@ -35,4 +35,16 @@ class Validador
   def getIntentosRestantes()
      @estatus.intentos
   end
+
+	def getLetrasFaltantes()
+		"C,S"
+	end
+
+	def getPalabra()
+		@estatus.palabra
+	end
+
+	def status()
+		""
+	end
 end
