@@ -1,4 +1,4 @@
-require 'modelo/estatus_juego'
+require 'lib/estatus_juego'
 
 describe EstatusJuego do
   context "Especs de diccionario" do
