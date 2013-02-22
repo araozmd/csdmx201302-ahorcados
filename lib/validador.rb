@@ -8,7 +8,7 @@ class Validador
   end
 
   def validaLetraEnPalabra(letra)
-    return (estatus.palabra.include?(letra))
+    return (@estatus.palabra.include?(letra))
   
   end
   def evaluarJugada (letra)
@@ -34,5 +34,26 @@ class Validador
   
   def getIntentosRestantes()
      @estatus.intentos
+  end
+  
+    def getPalabra()
+     @estatus.palabra
+  end
+  
+  def getLetrasFaltantes()
+    faltan=""
+    for i in (0..@estatus.palabra.size-1) do
+      if (not @estatus.letras_capturadas.include?(@estatus.palabra[i,1]) )
+        faltan +=@estatus.palabra[i,1]
+      end
+    end
+    faltan.split("").join(",")
+  end
+  def estatus
+    if (@estatus.letras_capturadas==@estatus.palabra)
+      "EXITO"
+    else
+      "FALLA"
+    end
   end
 end

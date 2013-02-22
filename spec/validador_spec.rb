@@ -36,5 +36,36 @@ describe Validador do
         restantes=@validador.getIntentosRestantes()
         restantes.should == 4
        end 
+       it "Con la palabra MAMA y la captura de las letras M,A, el estatus debe ser EXITO" do
+        @validador.evaluarJugada("A")
+        @validador.evaluarJugada("M")
+        estado=@validador.estatus()
+        estado.should == "EXITO"
+       end 
+       
+       it "Con la palabra MAMA y la captura de las letras B,C,D,E,F,G,H, el estatus debe ser FALLA" do
+        @validador.evaluarJugada("B")
+        @validador.evaluarJugada("C")
+        @validador.evaluarJugada("D")
+        @validador.evaluarJugada("E")
+        @validador.evaluarJugada("F")
+        @validador.evaluarJugada("G")
+        @validador.evaluarJugada("H")
+        estado=@validador.estatus()
+        estado.should == "FALLA"
+       end 
+      it "Con la palabra MAMA y la captura de las letras M se deben mostrar la letra A restante" do
+        @validador.evaluarJugada("M")
+        faltantes=@validador.getLetrasFaltantes()
+        faltantes.should == "A,A"
+       end 
+       
+      it "Con la palabra HOTEL y la captura de las letras H,E se deben mostrar 'O,T,L' restante" do
+        @validador=Validador.new("HOTEL")
+        @validador.evaluarJugada("H")
+        @validador.evaluarJugada("E")
+        faltantes=@validador.getLetrasFaltantes()
+        faltantes.should == "O,T,L"
+       end 
    end
 end
