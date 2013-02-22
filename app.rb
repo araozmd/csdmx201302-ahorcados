@@ -7,5 +7,5 @@ end
 
 
 get '/' do
-  "Te quedan 7 intentos"
+  erb :ahorcado
 end
