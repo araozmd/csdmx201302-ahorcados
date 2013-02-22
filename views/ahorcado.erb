@@ -1,10 +1,9 @@
-<h1>Te quedan 7 intentos</h1>
+<h1>Te quedan <%= @intentos %> intentos</h1>
 
-<form action="/saludar">
-	<span>_</span>
-	<span>_</span>
-	<span>_</span>
-	<span>_</span>
+<form action="/">
+	<% for caracter in (@palabra.each_char) %>
+		<span><%= caracter %></span> 
+	<% end %>
 	<br/>
 	<input type="text" name="letra"/>
 	<input type="submit" value="Enviar"/>
